@@ -23,8 +23,12 @@ export class AppComponent {
       if (!environment.production) {
         // const vConsole = new VConsole();
       }
-      this.statusBar.styleDefault();
+      // this.statusBar.styleDefault();
       this.splashScreen.hide();
+      if (cordova.platformId === 'android') {
+        this.statusBar.overlaysWebView(false);
+        // this.statusBar.backgroundColorByHexString('#33000000');
+      }
     });
   }
 }

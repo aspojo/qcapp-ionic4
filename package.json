@@ -9,7 +9,10 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "android": "ionic cordova run android",
+    "run android": "adb install platforms\\android\\app\\build\\outputs\\apk\\debug\\app-debug.apk",
+    "rerun android": "adb install -r platforms\\android\\app\\build\\outputs\\apk\\debug\\app-debug.apk"
   },
   "private": true,
   "dependencies": {
